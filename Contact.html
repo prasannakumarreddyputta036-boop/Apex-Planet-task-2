@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Contact Form & To-Do List</title>
+<link rel="stylesheet" href="styling.css">
+</head>
+<body>
+<!-- Flexbox Navigation -->
+<nav>
+    <h1>My Web Project</h1>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Form</a></li>
+        <li><a href="#">To-Do</a></li>
+    </ul>
+</nav>
+
+<!-- Grid Layout -->
+<div class="container">
+
+    <!-- Contact Form -->
+    <div class="card">
+        <h2>Contact Form</h2>
+
+        <form id="contactForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter Name">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter Email">
+
+            <textarea
+                id="message"
+                rows="6"
+                placeholder="Enter Message"></textarea>
+
+            <div id="errorMsg" class="error"></div>
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+    </div>
+
+    <!-- To-Do List -->
+    <div class="card">
+        <h2>To-Do List</h2>
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter Task">
+
+        <button onclick="addTask()">
+            Add Task
+        </button>
+
+        <ul id="taskList" class="todo-list"></ul>
+    </div>
+</div>
+<script src="validation.js"></script>
+</body>
+</html>

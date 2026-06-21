@@ -1,0 +1,125 @@
+   *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+    }
+
+    body{
+        background:#c88181;
+    }
+
+    /* Navigation - Flexbox */
+    nav{
+        background:#333;
+        color:rgba(214, 219, 239, 0.279);
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:15px 30px;
+    }
+
+    nav ul{
+        display:flex;
+        list-style:none;
+        gap:20px;
+    }
+
+    nav a{
+        color:rgba(122, 149, 217, 0.288);
+        text-decoration:none;
+    }
+
+    /* Main Layout - Grid */
+    .container{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:20px;
+        padding:20px;
+    }
+
+    .card{
+        background:rgba(109, 190, 161, 0.389);
+        padding:20px;
+        border-radius:10px;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2{
+        margin-bottom:15px;
+    }
+
+    /* Form */
+    form{
+        display:flex;
+        flex-direction:column;
+    }
+
+    input, textarea{
+        margin-bottom:10px;
+        padding:10px;
+        border:1px solid #ccc;
+        border-radius:5px;
+    }
+
+    button{
+        background:#e600ff17;
+        color:white;
+        border:none;
+        padding:10px;
+        border-radius:5px;
+        cursor:pointer;
+
+    }
+
+    button:hover{
+        background:#d2383839;
+    }
+
+    .error{
+        color:red;
+        font-size:14px;
+        margin-bottom:10px;
+    }
+
+    /* To-Do */
+    #taskInput{
+        width:100%;
+    }
+
+    ul.todo-list{
+        margin-top:15px;
+        list-style:none;
+    }
+
+    ul.todo-list li{
+        background:#eee;
+        padding:10px;
+        margin-bottom:10px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        border-radius:5px;
+    }
+
+    .delete-btn{
+        background:red;
+        padding:5px 10px;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+        .container{
+            grid-template-columns:1fr;
+        }
+
+        nav{
+            flex-direction:column;
+            gap:10px;
+        }
+
+        nav ul{
+            flex-direction:column;
+            text-align:center;
+        }
+    }
